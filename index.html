@@ -32,7 +32,7 @@
 
         .header {
             height: 100vh;
-            width: 100vh;
+            width: 100vw;
             color: #f4f4f4;
         }
 
@@ -74,12 +74,18 @@
         }
 
         .aboutMe {
-            height: 100vh;
+            height: auto;
             width: 100vw;
             background-color: #222;
-            padding: 20vw 9vw 12vw 11vw;
+            padding: 20vw 9vw 20vw 11vw;
             color: #f4f4f4;
             line-height: 30px;
+        }
+
+        .profilepic {
+            visibility: hidden;
+            height: 0vh;
+            width: 0vw;
         }
 
         .head {
@@ -106,9 +112,9 @@
         }
 
         .education {
-            height: 100vh;
+            height: auto;
             background-color: #b3b3b3;
-            padding: 20vw 10vw 10vw 10vw;
+            padding: 20vw 10vw 20vw 10vw;
         }
 
         .eduhead {
@@ -140,9 +146,9 @@
         }
 
         .skills {
-            height: 100vh;
+            height: auto;
             width: 100vw;
-            padding: 13vw 10vw 10vw 10vw;
+            padding: 13vw 10vw 16vw 10vw;
             background-color: #333;
         }
 
@@ -164,14 +170,14 @@
         }
 
         .work {
-            height: 100vh;
+            height: auto;
         }
 
         .copyright {
             color: #999999;
             background-color: #222;
             padding: 15px;
-            height: 10vh;
+            height: auto;
             text-align: center;
         }
 
@@ -201,7 +207,7 @@
 
         .work {
             background-color: #111;
-            padding: 8vw;
+            padding: 15vw 8vw;
         }
 
         a:link {
@@ -221,19 +227,164 @@
             text-decoration: none;
         }
 
-        /* a[ id="about"]:target~#main article.panel {
-            -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-        } */
+        @media only screen and (min-width:768px) {
 
-        /* a[ id="about"]:target~#main article.panel {
-            -webkit-transform: translateY(-500px);
-            transform: translateY(-500px);
-        } */
+            .image {
+                background-image: url(img6.png);
+                background-repeat: no-repeat;
+            }
 
-        a[ id="about"]:target~#main article.panel {
-            -webkit-transform: translateY(-1000px);
-            transform: translateY(-1000px);
+            .header {
+                height: 100vh;
+                width: 100vh;
+            }
+
+            .heading {
+                position: absolute;
+                left: 4vw;
+                bottom: 40vh;
+                font-size: 90px;
+            }
+
+            .note {
+                position: absolute;
+                left: 4vw;
+                bottom: 35vh;
+                font-size: 20px;
+            }
+
+            .social {
+                position: absolute;
+                top: 35vh;
+                left: 10vw;
+            }
+
+            .down {
+                position: absolute;
+                left: 40vw;
+                bottom: 4vh;
+            }
+
+            .aboutMe {
+                height: 100vh;
+                width: 100vw;
+                padding: 50px;
+            }
+
+            .inner {
+                position: absolute;
+                width: 50vw;
+                left: 45vw;
+            }
+
+            .profilepic {
+                visibility: visible;
+                position: absolute;
+                left: 8vw;
+                height: 70vh;
+                width: 40vw;
+            }
+
+            .head {
+                font-size: 37px;
+                overflow: hidden;
+            }
+
+            .info {
+                font-size: 17px;
+            }
+
+            .education {
+                height: 100vh;
+                padding: 20px 10vw 10vw 10vw;
+                background-color: rgba(153, 153, 153, 0.541);
+            }
+
+            .eduhead {
+                font-size: 40px;
+                letter-spacing: 4px;
+                text-align: center;
+                border-bottom: solid;
+                position: absolute;
+                left: 10vw;
+                margin-top: 25vh;
+            }
+
+            .institute {
+                position: absolute;
+                left: 40vw;
+                padding-top: 10vh;
+            }
+
+            .instituteHead {
+                text-align: center;
+                font-size: 25px;
+            }
+
+            .eduabout {
+                overflow: hidden;
+            }
+
+            .eduinfo {
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .skills {
+                height: auto;
+                width: 100vw;
+                padding: 30px 10vw 10vw 10vw;
+            }
+
+            .skillHead {
+                font-size: 25px;
+                letter-spacing: 4px;
+                text-align: center;
+                border-bottom: solid;
+            }
+
+            .container {
+                width: 80vw;
+                font-size: 20px;
+                line-height: 40px;
+            }
+
+            .work {
+                height: auto;
+            }
+
+            .copyright {
+                padding: 15px;
+                height: 10vh;
+                text-align: center;
+            }
+
+            #img {
+                height: 200px;
+                width: 120px;
+            }
+
+            .workPic {
+                display: grid;
+                grid-column-gap: 10px;
+                grid-template-columns: auto auto auto;
+            }
+
+            .workPic>section {
+                padding: 20px;
+            }
+
+            .workhead {
+                font-size: 25px;
+                letter-spacing: 4px;
+                text-align: center;
+                border-bottom: solid;
+            }
+
+            .work {
+                padding: 8vw;
+            }
+
         }
     </style>
 
@@ -259,22 +410,22 @@
             <!-- social media icons-->
             <span class="social">
                 <a href="https://www.facebook.com/nimish.bhandari.79?ref=bookmarks" target="_blank">
-                    <i class="fa fa-facebook-official" style="font-size: 8vw;color: #666"></i>
+                    <i class="fa fa-facebook-official" style="font-size: 25px;color: #666"></i>
                 </a>&nbsp;
                 <a href="https://www.instagram.com/bhandari.nimish/" target="_blank">
-                    <i class="fa fa-instagram" style="font-size: 8vw; color: #666"></i>
+                    <i class="fa fa-instagram" style="font-size: 25px; color: #666"></i>
                 </a>&nbsp;
                 <a href="https://github.com/nimishbhandari" target="_blank">
-                    <i class="fa fa-github" style="font-size: 8vw; color: #666"></i>
+                    <i class="fa fa-github" style="font-size: 25px; color: #666"></i>
                 </a>&nbsp;
                 <a href="#" target="_blank">
-                    <i class="fa fa-twitter" style="font-size: 8vw; color: #666"></i>
+                    <i class="fa fa-twitter" style="font-size: 25px; color: #666"></i>
                 </a>&nbsp;
                 <a href="#" target="_blank">
-                    <i class="fa fa-skype" style="font-size: 8vw; color: #666"></i>
+                    <i class="fa fa-skype" style="font-size: 25px; color: #666"></i>
                 </a>&nbsp;
                 <a href="#" target="_blank">
-                    <i class="fa fa-linkedin" style="font-size: 8vw; color: #666"></i>
+                    <i class="fa fa-linkedin" style="font-size: 25px; color: #666"></i>
                 </a>
             </span>
             <!--social media icon ends-->
@@ -282,7 +433,7 @@
             <!--down icon-->
             <a href="#about">
                 <span class="down">
-                    <i class="fa fa-chevron-circle-down" style="font-size:18vw; color: #999"></i>
+                    <i class="fa fa-chevron-circle-down" style="font-size:90px; color: #999"></i>
                 </span>
             </a>
         </div>
@@ -292,36 +443,41 @@
     <!--second page starts-->
     <!--about me section starts-->
     <div class="aboutMe" id="about">
-        <section class="card" data-aos="fade-right">
-            <div class="head">
-                About <span class="color">Me</span>
-            </div> <br>
-            <div class="info">
-                I am <span class="highlight">Nimish Bhandari</span> currently pursuing my Bachelor's degree in
-                <span class="highlight"> Electronics and Communication Engineering </span>
-                from Madan Mohan Malaviya University of Technology, Gorakhpur. A part time <span class="highlight">
-                    Doodler</span> and a <span class="highlight"> Web-Developer</span> in
-                making with good command over HTML, CSS, Javascript, SQL, PHP.
-            </div>
-        </section>
-        <br>
-        <!--about me section ends-->
+        <div class="profilepic">
+            <img src="img7.png" alt="profile pic">
+        </div>
+        <div class="inner">
+            <section class="card" data-aos="fade-right">
+                <div class="head">
+                    About <span class="color">Me</span>
+                </div> <br>
+                <div class="info">
+                    I am <span class="highlight">Nimish Bhandari</span> currently pursuing my Bachelor's degree in
+                    <span class="highlight"> Electronics and Communication Engineering </span>
+                    from Madan Mohan Malaviya University of Technology, Gorakhpur. A part time <span class="highlight">
+                        Doodler</span> and a <span class="highlight"> Web-Developer</span> in
+                    making with good command over HTML, CSS, Javascript, SQL, PHP.
+                </div>
+            </section>
+            <br>
+            <!--about me section ends-->
 
-        <hr color="yellow">
+            <hr color="yellow" id="hr1">
 
-        <!--contact details starts-->
-        <br>
-        <section class="card" data-aos="fade-left">
-            <div class="head">
-                <span class="color">Contact</span> Details
-            </div> <br>
-            <div class="info">
-                Nimish Bhandari <br>
-                Madan Mohan Malaviya University of Technology, Gorakhpur <br>
-                <span class="highlight">+91-8303578247</span> <br>
-                <span class="highlight">nimishbhandari727521@gmail.com</span>
-            </div>
-        </section>
+            <!--contact details starts-->
+            <br>
+            <section class="card" data-aos="fade-left">
+                <div class="head">
+                    <span class="color">Contact</span> Details
+                </div> <br>
+                <div class="info">
+                    Nimish Bhandari <br>
+                    Madan Mohan Malaviya University of Technology, Gorakhpur <br>
+                    <span class="highlight">+91-8303578247</span> <br>
+                    <span class="highlight">nimishbhandari727521@gmail.com</span>
+                </div>
+            </section>
+        </div>
     </div>
     <!--second page ends -->
 
