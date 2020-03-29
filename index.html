@@ -11,403 +11,17 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Vesper+Libre&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="main.css">
 
     <title>Proprietor's Portfolio</title>
-
-    <!--css-->
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            overflow-x: hidden;
-        }
-
-        .overlay {
-            background: rgba(0, 0, 0, 0.89);
-        }
-
-        .image {
-            background-image: url(img.png);
-        }
-
-        .header {
-            height: 100vh;
-            width: 100vw;
-            color: #f4f4f4;
-        }
-
-        .heading {
-            position: absolute;
-            left: 3vw;
-            bottom: 25vh;
-            font-size: 17vw;
-            /* letter-spacing: 3px; */
-            /* font-family: 'Sen', sans-serif; */
-            /* font-family: 'Oswald', sans-serif; */
-            font-family: 'Noto Serif', serif;
-        }
-
-        .prop {
-            color: #ffda06;
-            /* color: #5288fd */
-        }
-
-        .note {
-            position: absolute;
-            left: 3vw;
-            bottom: 17vh;
-            font-size: 5vw;
-            color: #666;
-            font-weight: 400;
-        }
-
-        .social {
-            position: absolute;
-            top: 10vh;
-            left: 20vw
-        }
-
-        .down {
-            position: absolute;
-            left: 40vw;
-            bottom: 4vh;
-        }
-
-        .aboutMe {
-            height: auto;
-            width: 100vw;
-            background-color: #222;
-            padding: 20vw 9vw 20vw 11vw;
-            color: #f4f4f4;
-            line-height: 30px;
-        }
-
-        .profilepic {
-            visibility: hidden;
-            height: 0vh;
-            width: 0vw;
-        }
-
-        .head {
-            font-size: 37px;
-            overflow: hidden;
-            font-family: 'Sen', sans-serif;
-        }
-
-        .color {
-            color: #ffda06;
-        }
-
-        .info {
-            color: #999;
-            font-size: 17px;
-        }
-
-        .highlight {
-            color: #fff;
-        }
-
-        .highlight2 {
-            color: #000
-        }
-
-        .education {
-            height: auto;
-            background-color: #b3b3b3;
-            padding: 20vw 10vw 20vw 10vw;
-        }
-
-        .eduhead {
-            font-size: 25px;
-            font-family: 'Oswald', sans-serif;
-            color: #3e6bca;
-            letter-spacing: 4px;
-            text-align: center;
-            border-bottom: solid;
-        }
-
-        .instituteHead {
-            font-family: 'Noto Serif', serif;
-            text-align: center;
-            font-size: 25px;
-            font-weight: 1000;
-            color: rgb(19, 17, 17);
-        }
-
-        .eduabout {
-            overflow: hidden;
-        }
-
-        .eduinfo {
-            text-align: center;
-            color: #555;
-            font-family: 'Vesper Libre', serif;
-            font-size: 18px;
-        }
-
-        .skills {
-            height: auto;
-            width: 100vw;
-            padding: 13vw 10vw 16vw 10vw;
-            background-color: #333;
-        }
-
-        .skillHead {
-            font-size: 25px;
-            font-family: 'Oswald', sans-serif;
-            color: #5288fd;
-            letter-spacing: 4px;
-            text-align: center;
-            border-bottom: solid;
-        }
-
-        .container {
-            width: 80vw;
-            font-family: 'Vesper Libre', serif;
-            color: #f4f4f4;
-            font-size: 20px;
-            line-height: 40px;
-        }
-
-        .work {
-            height: auto;
-        }
-
-        .copyright {
-            color: #999999;
-            background-color: #222;
-            padding: 15px;
-            height: auto;
-            text-align: center;
-        }
-
-        #img {
-            height: 200px;
-            width: 120px;
-        }
-
-        .workPic {
-            display: grid;
-            grid-column-gap: 10px;
-            grid-template-columns: auto auto;
-        }
-
-        .workPic>section {
-            padding: 20px;
-        }
-
-        .workhead {
-            font-size: 25px;
-            font-family: 'Oswald', sans-serif;
-            color: #ffda06;
-            letter-spacing: 4px;
-            text-align: center;
-            border-bottom: solid;
-        }
-
-        .work {
-            background-color: #111;
-            padding: 15vw 8vw;
-        }
-
-        a:link {
-            text-decoration: none;
-        }
-
-        a:visited {
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        a:active {
-            text-decoration: none;
-        }
-
-        @media only screen and (min-width:768px) {
-
-            .image {
-                background-image: url(img6.png);
-                background-repeat: no-repeat;
-            }
-
-            .header {
-                height: 100vh;
-                width: 100vh;
-            }
-
-            .heading {
-                position: absolute;
-                left: 4vw;
-                bottom: 40vh;
-                font-size: 90px;
-            }
-
-            .note {
-                position: absolute;
-                left: 4vw;
-                bottom: 35vh;
-                font-size: 20px;
-            }
-
-            .social {
-                position: absolute;
-                top: 35vh;
-                left: 10vw;
-            }
-
-            .down {
-                position: absolute;
-                left: 40vw;
-                bottom: 4vh;
-            }
-
-            .aboutMe {
-                height: 100vh;
-                width: 100vw;
-                padding: 50px;
-            }
-
-            .inner {
-                position: absolute;
-                width: 50vw;
-                left: 45vw;
-            }
-
-            .profilepic {
-                visibility: visible;
-                position: absolute;
-                left: 8vw;
-                height: 70vh;
-                width: 40vw;
-            }
-
-            .head {
-                font-size: 37px;
-                overflow: hidden;
-            }
-
-            .info {
-                font-size: 17px;
-            }
-
-            .education {
-                height: 100vh;
-                padding: 20px 10vw 10vw 10vw;
-                background-color: rgba(153, 153, 153, 0.541);
-            }
-
-            .eduhead {
-                font-size: 40px;
-                letter-spacing: 4px;
-                text-align: center;
-                border-bottom: solid;
-                position: absolute;
-                left: 10vw;
-                margin-top: 25vh;
-            }
-
-            .institute {
-                position: absolute;
-                left: 40vw;
-                padding-top: 10vh;
-            }
-
-            .instituteHead {
-                text-align: center;
-                font-size: 25px;
-            }
-
-            .eduabout {
-                overflow: hidden;
-            }
-
-            .eduinfo {
-                text-align: center;
-                font-size: 18px;
-            }
-
-            .skills {
-                height: auto;
-                width: 100vw;
-                padding: 30px 10vw 10vw 10vw;
-            }
-
-            .skillHead {
-                font-size: 25px;
-                letter-spacing: 4px;
-                text-align: center;
-                border-bottom: solid;
-            }
-
-            .container {
-                width: 80vw;
-                font-size: 20px;
-                line-height: 40px;
-            }
-
-            .work {
-                height: auto;
-            }
-
-            .copyright {
-                padding: 15px;
-                height: 10vh;
-                text-align: center;
-            }
-
-            #img {
-                height: 200px;
-                width: 120px;
-            }
-
-            .workPic {
-                display: grid;
-                grid-column-gap: 10px;
-                grid-template-columns: auto auto auto;
-            }
-
-            .workPic>section {
-                padding: 20px;
-            }
-
-            .workhead {
-                font-size: 25px;
-                letter-spacing: 4px;
-                text-align: center;
-                border-bottom: solid;
-            }
-
-            .work {
-                padding: 8vw;
-            }
-
-        }
-    </style>
 
 </head>
 
 <body>
     <!-- landing page starts-->
-    <!-- heading text -->
+    <!-- social media icons-->
     <div class="image">
         <div class="overlay">
-            <div class="header">
-
-                <div class="heading">
-                    <span class="prop">PROP</span>rietor
-                </div>
-                <div class="note">
-                    Web-Developer, Designer, Doodler,
-                    B.Tech student.
-                </div>
-            </div>
-            <!--heading text ends-->
-
-            <!-- social media icons-->
             <span class="social">
                 <a href="https://www.facebook.com/nimish.bhandari.79?ref=bookmarks" target="_blank">
                     <i class="fa fa-facebook-official" style="font-size: 25px;color: #666"></i>
@@ -430,10 +44,23 @@
             </span>
             <!--social media icon ends-->
 
+            <!-- heading text -->
+            <div class="header">
+
+                <div class="heading">
+                    <span class="prop">PROP</span>rietor
+                </div>
+                <div class="note">
+                    Web-Developer, Designer, Doodler,
+                    B.Tech student.
+                </div>
+            </div>
+            <!--heading text ends-->
+
             <!--down icon-->
             <a href="#about">
                 <span class="down">
-                    <i class="fa fa-chevron-circle-down" style="font-size:90px; color: #999"></i>
+                    <i class="fa fa-chevron-circle-down" style="font-size:70px; color: #999"></i>
                 </span>
             </a>
         </div>
@@ -609,7 +236,7 @@
                 </div>
             </section>
 
-            <section class="card" data-aos="fade-left">
+            <section class="card" data-aos="fade-right">
                 <div>
                     <a href="https://nimishbhandari.github.io/reverse/" target="_blank">
                         <img src="img3.png" alt="Type.reverse" id="img">
@@ -645,40 +272,8 @@
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 150, // offset (in px) from the original trigger point
-            delay: 0, // values from 0 to 3000, with step 50ms
-            duration: 1000 // values from 0 to 3000, with step 50ms
-        });
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
-
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-
-                    // Store hash
-                    var hash = this.hash;
-
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function () {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                } // End if
-            });
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
