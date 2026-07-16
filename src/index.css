@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/jetbrains-mono';
+
+@theme {
+  /* "Nimish Dark" — VS Code-inspired surfaces */
+  --color-chrome: #181818;
+  --color-chrome-hi: #2a2a2a;
+  --color-sidebar: #1f1f1f;
+  --color-editor: #1e1e2e;
+  --color-editor-hi: #272739;
+  --color-border: #2f2f3a;
+
+  --color-accent: #7c3aed;
+  --color-accent-hi: #a78bfa;
+
+  --color-fg: #e6e6ef;
+  --color-fg-dim: #9a9aae;
+  --color-fg-faint: #6b6b80;
+
+  /* Syntax palette */
+  --color-syn-comment: #6a9955;
+  --color-syn-key: #c586c0;
+  --color-syn-str: #ce9178;
+  --color-syn-fn: #dcdcaa;
+  --color-syn-var: #9cdcfe;
+  --color-syn-num: #b5cea8;
+  --color-syn-type: #4ec9b0;
+
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* The shell is a fixed-height app frame; only the editor pane scrolls.
+     Guards against any child forcing the page sideways. */
+  html,
+  body {
+    overflow-x: hidden;
+    overscroll-behavior: none;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-chrome);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-hi);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Editor pane scrollbar, styled to match the chrome. */
+  .vs-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #3f3f4a transparent;
+  }
+  .vs-scroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .vs-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .vs-scroll::-webkit-scrollbar-thumb {
+    background: #3f3f4a;
+    border-radius: 5px;
+  }
+  .vs-scroll::-webkit-scrollbar-thumb:hover {
+    background: #55556a;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
