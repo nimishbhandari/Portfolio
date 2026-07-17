@@ -48,7 +48,7 @@ export function Sidebar({ active, onSelect }: SidebarProps) {
           <li className="mt-1 border-t border-border pt-1">
             <a
               href={import.meta.env.BASE_URL + profile.resume}
-              download
+              download={profile.resumeFilename}
               className="flex min-h-11 w-full items-center gap-2 border-l-2 border-transparent py-1 pl-4 pr-3 font-mono text-[13px] text-fg-dim transition-colors hover:bg-chrome-hi hover:text-fg md:min-h-0 md:py-[3px] md:text-[12px]"
             >
               <FileIcon lang="pdf" />

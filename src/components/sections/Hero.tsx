@@ -103,7 +103,7 @@ export function Hero({ onNavigate }: { onNavigate: (id: SectionId) => void }) {
             </button>
             <a
               href={import.meta.env.BASE_URL + profile.resume}
-              download
+              download={profile.resumeFilename}
               className="flex min-h-11 items-center gap-2 rounded-md border border-border bg-editor-hi/60 px-5 font-mono text-[13px] text-fg-dim transition-colors hover:border-accent/60 hover:text-fg"
             >
               <span aria-hidden="true">↓</span> Résumé

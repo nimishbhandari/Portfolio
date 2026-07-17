@@ -107,7 +107,7 @@ export function CommandPalette({ open, onClose, onSelect }: CommandPaletteProps)
           <li className="mt-1 border-t border-border pt-1">
             <a
               href={import.meta.env.BASE_URL + profile.resume}
-              download
+              download={profile.resumeFilename}
               onClick={onClose}
               className="flex w-full items-center gap-2 px-4 py-2 font-mono text-[12px] text-fg-dim hover:bg-accent/25 hover:text-fg"
             >

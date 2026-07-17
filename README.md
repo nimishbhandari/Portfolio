@@ -30,12 +30,17 @@ touching a component. `**bold**` markers in strings are rendered by `RichText`.
 
 To change the navigation, edit the `files` array; each entry maps a filename to a section.
 
-## Two things to do
+## Still to do
 
-1. **Résumé** — `public/resume.pdf` is a placeholder. Replace it with your compiled PDF.
-2. **Avatar** — the About section uses an `NB` monogram. To use a photo, drop it in
-   `public/` and swap the monogram block in
-   [`src/components/sections/About.tsx`](src/components/sections/About.tsx).
+- **Avatar** — the About section uses an `NB` monogram. To use a photo, drop it in
+  `public/` and swap the monogram block in
+  [`src/components/sections/About.tsx`](src/components/sections/About.tsx).
+
+## Résumé
+
+`public/resume.pdf` is the live file — replace it to update the download. It's served at
+`/Portfolio/resume.pdf` and saved as the filename in `profile.resumeFilename`
+([`src/data/content.ts`](src/data/content.ts)).
 
 ## Deploying
 

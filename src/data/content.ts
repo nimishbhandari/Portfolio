@@ -39,6 +39,8 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/b-nimish/',
   linkedinHandle: 'in/b-nimish',
   resume: 'resume.pdf',
+  /** What the file is saved as when downloaded — matches the name shown in the explorer. */
+  resumeFilename: 'Nimish_Bhandari_Resume.pdf',
   chips: ['Software Engineer 2', 'Full-Stack Developer', 'AI Integrations', '@ Lyearn'],
   /** Typewriter phrases on the hero. */
   typewriter: [
